@@ -35,7 +35,7 @@ class ProfileUI extends StatelessWidget {
                 bottom: -60.0,
                 child: CircleAvatar(
                   radius: 80,
-                  backgroundColor: Colors.black12,
+                  backgroundColor: Colors.black54,
                   child: CircleAvatar(
                     radius: 75,
                     backgroundImage: NetworkImage(
@@ -102,68 +102,86 @@ class ProfileUI extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(height: 25),
+          // Row(
+          //   mainAxisAlignment: MainAxisAlignment.center,
+          //   children: [
+          //     FloatingActionButton.extended(
+          //       onPressed: () {
+          //         ScaffoldMessenger.of(context).showSnackBar(
+          //           const SnackBar(content: Center(child: Text("Gmail"))),
+          //         );
+          //       },
+          //       icon: Icon(Icons.mail, color: Colors.white),
+          //       label: Text(
+          //         'Gmail',
+          //         style: TextStyle(color: Colors.white, fontSize: 15),
+          //       ),
+          //       backgroundColor: Colors.black87,
+          //       shape: RoundedRectangleBorder(
+          //         borderRadius: BorderRadius.circular(10),
+          //       ),
+          //     ),
+          //     SizedBox(width: 10),
+          //     FloatingActionButton.extended(
+          //       onPressed: () {
+          //         makePhoneCall('+255673353890');
+          //       },
+          //       icon: Icon(Icons.phone, color: Colors.white),
+          //       label: Text(
+          //         'Call',
+          //         style: TextStyle(color: Colors.white, fontSize: 15),
+          //       ),
+          //       backgroundColor: Colors.black87,
+          //       shape: RoundedRectangleBorder(
+          //         borderRadius: BorderRadius.circular(10),
+          //       ),
+          //     ),
+          //   ],
+          // ),
+          Text('+255 123 456 789', style: TextStyle(fontSize: 17)),
+          SizedBox(height: 25),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              FloatingActionButton.extended(
-                onPressed: () {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Center(child: Text("Gmail"))),
-                  );
-                },
-                icon: Icon(Icons.mail, color: Colors.white),
-                label: Text(
-                  'Gmail',
-                  style: TextStyle(color: Colors.white, fontSize: 15),
-                ),
+              FloatingActionButton(
+                onPressed: () {},
                 backgroundColor: Colors.black87,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
+                child: FaIcon(FontAwesomeIcons.instagram, color: Colors.white),
               ),
               SizedBox(width: 10),
-              FloatingActionButton.extended(
-                onPressed: () {
-                  makePhoneCall('+255673353890');
-                },
-                icon: Icon(Icons.phone, color: Colors.white),
-                label: Text(
-                  'Call',
-                  style: TextStyle(color: Colors.white, fontSize: 15),
-                ),
+              FloatingActionButton(
+                onPressed: () {},
                 backgroundColor: Colors.black87,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
+                child: FaIcon(FontAwesomeIcons.twitter, color: Colors.white),
               ),
-            ],
-          ),
-          SizedBox(height: 15),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              IconButton(
+              SizedBox(width: 10),
+              FloatingActionButton(
                 onPressed: () {},
-                icon: FaIcon(FontAwesomeIcons.instagram, color: Colors.pink),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: FaIcon(FontAwesomeIcons.twitter, color: Colors.blue),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: FaIcon(FontAwesomeIcons.tiktok, color: Colors.black87),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: FaIcon(
-                  FontAwesomeIcons.linkedin,
-                  color: Colors.blueAccent,
+                backgroundColor: Colors.black87,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
                 ),
+                child: FaIcon(FontAwesomeIcons.tiktok, color: Colors.white),
+              ),
+              SizedBox(width: 10),
+              FloatingActionButton(
+                onPressed: () {},
+                backgroundColor: Colors.black87,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: FaIcon(FontAwesomeIcons.linkedin, color: Colors.white),
               ),
             ],
           ),
-          SizedBox(height: 15),
+          SizedBox(height: 25),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -178,7 +196,7 @@ class ProfileUI extends StatelessWidget {
                 icon: Icon(Icons.save_sharp, color: Colors.white),
                 label: Text(
                   'Save Contact',
-                  style: TextStyle(color: Colors.white, fontSize: 15),
+                  style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
                 backgroundColor: Colors.black87,
                 shape: RoundedRectangleBorder(
