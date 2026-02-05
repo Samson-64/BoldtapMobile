@@ -1,5 +1,7 @@
+// import 'package:contacts_service/contacts_service.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+// import 'package:permission_handler/permission_handler.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ProfileUI extends StatelessWidget {
@@ -186,10 +188,19 @@ class ProfileUI extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               FloatingActionButton.extended(
-                onPressed: () {
+                onPressed: () async {
+                  // if (await Permission.contacts.request().isGranted) {
+                  //   Contact newContact = Contact(
+                  //     givenName: "",
+                  //     phones: [
+                  //       item(label: "mobile", value: "+255 123 456 789"),
+                  //     ],
+                  //   );
+                  // }
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
                       content: Center(child: Text("Contact saved")),
+                      duration: Duration(seconds: 2),
                     ),
                   );
                 },
